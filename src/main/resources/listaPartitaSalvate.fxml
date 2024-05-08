@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPaneListaPartita" prefHeight="400.0" prefWidth="600.0" styleClass="anchor" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListaPartitaSalvateController">
+    <stylesheets>
+        <URL value="@grafica.css" />
+    </stylesheets>
+   <children>
+      <ListView fx:id="listViewPartiteSalvate" layoutX="19.0" layoutY="80.0" prefHeight="271.0" prefWidth="563.0" />
+      <Button layoutX="19.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnStart" text="Nuova Partita" />
+      <Button layoutX="151.0" layoutY="45.0" mnemonicParsing="false" onAction="#OrdinaNumeroMosse" text="Numero di mosse" />
+      <Button layoutX="287.0" layoutY="45.0" mnemonicParsing="false" onAction="#OrdinaValorePezzi" text="Valore complessivo dei pezzi" />
+      <Button layoutX="472.0" layoutY="45.0" mnemonicParsing="false" onAction="#OrdinaNumeroPezzi" text="Numero di pezzi" />
+      <Label layoutX="214.0" layoutY="18.0" text="Ordinamento delle partite salvate in ordine crescente" />
+   </children>
+
+
+</AnchorPane>

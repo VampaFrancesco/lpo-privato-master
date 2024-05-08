@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchor" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ScacchieraController">
+
+    <stylesheets>
+        <URL value="@grafica.css" />
+    </stylesheets>
+
+    <Pane layoutY="-1.0" pickOnBounds="false" prefHeight="736.0" prefWidth="974.0">
+      <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="974.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#saveButton" text="Salva" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAndExit" text="Salva e esci" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Esci" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+        <GridPane fx:id="gridPaneX" gridLinesVisible="true" layoutX="290.0" layoutY="115.0" prefWidth="0.0">
+
+        </GridPane>
+        <Label blendMode="MULTIPLY" layoutX="285.0" layoutY="598.0" prefHeight="60.0" prefWidth="480.0" text=" A   B   C   D   E   F   G   H" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Arial" size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="118.0" prefHeight="60.0" prefWidth="75.0" text="  8" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="178.0" prefHeight="60.0" prefWidth="75.0" text="  7" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="238.0" prefHeight="60.0" prefWidth="75.0" text="  6" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="298.0" prefHeight="60.0" prefWidth="75.0" text="  5" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="358.0" prefHeight="60.0" prefWidth="75.0" text="  4 " textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="418.0" prefHeight="60.0" prefWidth="75.0" text="  3" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="478.0" prefHeight="60.0" prefWidth="75.0" text="  2" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="538.0" prefHeight="60.0" prefWidth="75.0" text="  1" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNomePlayer1" layoutX="14.0" layoutY="268.0" prefHeight="32.0" prefWidth="200.0" text="player1" textAlignment="RIGHT">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelNomePlayer2" layoutX="14.0" layoutY="102.0" prefHeight="32.0" prefWidth="200.0" text="player2">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="buttonUndo" layoutX="22.0" layoutY="626.0" mnemonicParsing="false" onAction="#undo" text="undo disponibili 5" />
+
+        <Label layoutX="14.0" layoutY="132.0" prefHeight="32.0" prefWidth="200.0" textAlignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+      <Label layoutX="101.0" layoutY="192.0" text="VS" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <ScrollPane fx:id="scrollPaneMosse" layoutX="14.0" layoutY="408.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="textAreaMosse" prefHeight="200.0" prefWidth="200.0" styleClass="text-area" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label fx:id="pezziMangiatiGiocatoreBianco" layoutX="14.0" layoutY="300.0" prefHeight="32.0" prefWidth="200.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="pezziMangiatiGiocatoreNero" layoutX="14.0" layoutY="132.0" prefHeight="32.0" prefWidth="200.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="Patta" layoutX="812.0" layoutY="680.0" mnemonicParsing="false" onAction="#patta" text="Richiedi Patta" />
+      <Button fx:id="Abbandona" layoutX="734.0" layoutY="680.0" mnemonicParsing="false" onAction="#abbandona" text="Abbandona" />
+      <Label fx:id="labelPuntiG2" layoutX="170.0" layoutY="148.0" text="puntiG2" />
+      <Label fx:id="labelPuntiG1" layoutX="170.0" layoutY="308.0" text="puntiG1" />
+      <effect>
+         <Blend />
+      </effect>
+    </Pane>
+
+
+</AnchorPane>

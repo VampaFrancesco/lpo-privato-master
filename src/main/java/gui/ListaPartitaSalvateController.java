@@ -40,8 +40,11 @@ public class ListaPartitaSalvateController {
      * Metodo che viene invocato quando si carica la finestra
      */
     public void init() {
+        listSalvataggi.clear();
         caricaPartiteFiltrate();
         renderListaPartitaSalvate();
+
+
     }
 
     /**
@@ -49,6 +52,7 @@ public class ListaPartitaSalvateController {
      * Tale metodo viene invocato nel momento in cui si desidera caricare una partita.
      * Nel caso in cui non sono presenti file, il metodo gestisce anche l'eccezzione attraverso la classe NoSalvataggioException().
      */
+
     public static void caricaPartiteFiltrate() {
         ArrayList<File> fileList = new ArrayList<>();
         File directory = new File(System.getProperty("user.dir") + File.separator + "saved_games");
@@ -84,6 +88,7 @@ public class ListaPartitaSalvateController {
         ObservableList<String> elementi = FXCollections.observableArrayList();
         for (Salvataggio save : listSalvataggi) {
             elementi.add(save.getNomeFile());
+
         }
         listViewPartiteSalvate.setItems(elementi);
         listViewPartiteSalvate.setOnMouseClicked(event -> {
